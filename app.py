@@ -1,6 +1,7 @@
 import streamlit as st
 from forecaster import Forecaster
 import warnings
+import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
@@ -49,4 +50,8 @@ if run_button:
         model.load_models()
         model.predict()
 
-        st.pyplot(model.plot_predictions())
+        model.plot_predictions()
+
+        for i in plt.get_fignums():
+            fig = plt.figure(i)  # Получаем фигуру по номеру
+            st.pyplot(fig)
