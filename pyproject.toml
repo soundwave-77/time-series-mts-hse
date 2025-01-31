@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "time-series"
+version = "0.1.0"
+description = ""
+authors = ["Vladislav Kirienko <ve.kirienko7@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11.0"
+statsmodels = ">=0.12,<0.14"
+pandas = ">=1.1,<2.0"
+scipy = "^1.14.1"
+matplotlib = "^3.9.3"
+seaborn = "^0.13.2"
+sktime = "^0.35.0"
+plotly = "^5.24.1"
+ipykernel = "^6.29.5"
+nbformat = "^5.10.4"
+etna = {extras = ["all"], version = "^2.10.0"}
+streamlit = "^1.41.1"
+ruff = "^0.9.4"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
