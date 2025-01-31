@@ -23,7 +23,7 @@ placeholder = st.empty()
 with placeholder.container():
     model_type = st.selectbox(
         label="Выберите тип модели",
-        options=[model_type.value for model_type in ModelType],
+        options=["MA", "ARIMA", "CATBOOST"],
     )
 
     horizon = st.selectbox(

@@ -1,8 +1,8 @@
 init:
-	poetry shell && poetry install
+	poetry install
 
 lint:
 	ruff format && ruff check --fix
 
 run-app:
-	streamlit run app.py
+	poetry run streamlit run app.py

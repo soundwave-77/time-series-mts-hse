@@ -172,3 +172,5 @@ cython_debug/
 
 catboost_info/
 
+# Не будем использовать SARIMAX-модели
+*SARIMAX*
