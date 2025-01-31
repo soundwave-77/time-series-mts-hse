@@ -1,5 +1,5 @@
 import streamlit as st
-from forecaster import ModelType, Forecaster
+from forecaster import Forecaster
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -41,10 +41,10 @@ with placeholder.container():
 if run_button:
     placeholder.empty()
     st.markdown(
-        "##### :green[Если хотите заново запустить обучение модели, обновите страницу!]"
+        "##### :green[Если хотите заново запустить инференс модели, обновите страницу!]"
     )
 
-    with st.spinner("Идет процесс обучения модели"):
+    with st.spinner("Идет процесс инференса модели"):
         model = Forecaster(model_name=model_type, horizon=horizon, use_fitted=True)
         model.load_models()
         model.predict()

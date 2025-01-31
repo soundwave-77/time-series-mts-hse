@@ -17,5 +17,5 @@ make run-app
 ```
 - Если утилиты make нет, то нужно запустить следующую команду:
 ```
-poetry shell && poetry install && streamlit run app.py
+poetry install && poetry run streamlit run app.py
 ```
